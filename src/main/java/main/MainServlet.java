@@ -13,7 +13,8 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         PrintWriter writer = response.getWriter();
-        writer.println("Hello World! It works automatically! \nSecond attempt " );
+        writer.println("Hello World! It works automatically! \nSecond attempt " +
+                "jkjii" );
     }
 
 }

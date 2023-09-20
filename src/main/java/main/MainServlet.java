@@ -14,7 +14,7 @@ public class MainServlet extends HttpServlet {
             throws IOException, ServletException {
         PrintWriter writer = response.getWriter();
         writer.println("Hello World! It works automatically! \nSecond attempt " +
-                "jk" );
+                "j" );
     }
 
 }

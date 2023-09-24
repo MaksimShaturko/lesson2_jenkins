@@ -5,4 +5,5 @@ public class SessionAttribute {
     public static final String ERROR_TYPE = "errorType";
     public static final String ERROR_MESSAGE = "errorMessage";
     public static final String REQUEST_URL = "requestUrl";
+    public static final String USER = "user";
 }

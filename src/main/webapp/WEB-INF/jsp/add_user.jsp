@@ -27,5 +27,7 @@
     <input type="submit"
            value="Add a user"/>
 </form>
+<br>
+<a href="main?command=get_all_users">List of all users </a>
 </body>
 </html>

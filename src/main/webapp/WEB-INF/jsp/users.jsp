@@ -22,6 +22,7 @@
             <td>Age</td>
             <td>Email</td>
             <td></td>
+            <td></td>
         </tr>
         <c:forEach items="${sessionScope.listOfUsers}" var="user">
             <tr>
@@ -33,9 +34,13 @@
                 <form action="main" method="post">
                     <input type="hidden" name="command" value="delete_user"/>
                     <input type="hidden" name="user_id" value="${user.id}"/>
-                    <td><input type="submit" value="Delete user"/></td>
+                    <td><input type="submit" value="Delete a user"/></td>
                 </form>
-
+                <form action="main" method="post">
+                    <input type="hidden" name="command" value="get_user"/>
+                    <input type="hidden" name="user_id" value="${user.id}"/>
+                    <td><input type="submit" value="Edit a user"/></td>
+                </form>
             </tr>
         </c:forEach>
     </table>
@@ -46,7 +51,5 @@
         Add a user
     </button>
 </div>
-<br>
-<a href="main?command=get_all_users">List of all users </a></p>
 </body>
 </html>

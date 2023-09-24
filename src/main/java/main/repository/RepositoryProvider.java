@@ -2,7 +2,9 @@ package main.repository;
 
 import main.repository.impl.AddUserRepositoryImpl;
 import main.repository.impl.DeleteUserRepositoryImpl;
+import main.repository.impl.EditUserRepositoryImpl;
 import main.repository.impl.GetAllUsersRepositoryImpl;
+import main.repository.impl.GetUserRepositoryImpl;
 import main.repository.impl.TransactionalRepositoryImpl;
 
 public class RepositoryProvider {
@@ -19,26 +21,26 @@ public class RepositoryProvider {
     }
 
     public GetAllUsersRepository getAllUsersRepository() {
-        GetAllUsersRepository getAllUsersRepository;
-        getAllUsersRepository = new GetAllUsersRepositoryImpl();
-        return getAllUsersRepository;
+        return new GetAllUsersRepositoryImpl();
+    }
+
+    public GetUserRepository getUserRepository() {
+        return new GetUserRepositoryImpl();
     }
 
     public DeleteUserRepository getDeleteUsersRepository() {
-        DeleteUserRepository deleteUserRepository;
-        deleteUserRepository = new DeleteUserRepositoryImpl();
-        return deleteUserRepository;
+        return new DeleteUserRepositoryImpl();
     }
 
     public AddUserRepository getAddUserRepository() {
-        AddUserRepository addUserRepository;
-        addUserRepository = new AddUserRepositoryImpl();
-        return addUserRepository;
+        return new AddUserRepositoryImpl();
+    }
+
+    public EditUserRepository getEditUserRepository() {
+        return new EditUserRepositoryImpl();
     }
 
     public TransactionalRepository getTransactionalRepository() {
-        TransactionalRepository transactionalRepository;
-        transactionalRepository = TransactionalRepositoryImpl.getInstance();
-        return transactionalRepository;
+        return TransactionalRepositoryImpl.getInstance();
     }
 }

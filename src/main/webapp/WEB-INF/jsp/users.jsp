@@ -47,6 +47,6 @@
     </button>
 </div>
 <br>
-<a href="main?command=get_all_users">List of all users</a></p>
+<a href="main?command=get_all_users">List of all users </a></p>
 </body>
 </html>
